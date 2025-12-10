@@ -157,7 +157,7 @@ class CANHandlerNode(Node):
             
             self.get_logger().debug(
                 f'Sent CAN message: ID=0x{msg.id:X}, DLC={msg.dlc}, '
-                f'Data={bytes(msg.data[:msg.dlc]).hex()}'
+                f'Data={msg.data[:msg.dlc]}'
             )
             
         except can.CanError as e:
