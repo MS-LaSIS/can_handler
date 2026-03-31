@@ -131,11 +131,12 @@ class CANHandlerNode(Node):
         speed_msg = Float32()
         # speed_msg.header.stamp = self.can_to_ros_time(msg.timestamp)
         # speed_msg.header.frame_id = 'base_link'
-        speed_msg.data = speed
+        # from km/h to m/s
+        speed_msg.data = speed / 3.6
         
         self.vehicle_speed_pub.publish(speed_msg)
         
-        self.get_logger().debug(f'Vehicle Speed: {speed:.2f} km/h')
+        self.get_logger().debug(f'Vehicle Speed: {speed:.2f} m/s')
 
     def to_can_callback(self, msg: Frame):
         """
