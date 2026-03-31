@@ -126,7 +126,7 @@ ros2 topic pub /to_can can_msgs/msg/Frame "{id: 0x18FF0001, is_extended: true, d
 | Topic | Type | Description |
 |-------|------|-------------|
 | `<node_name>/motor_current` | `std_msgs/Float32` | Motor current in Amps |
-| `<node_name>/vehicle_speed` | `std_msgs/Float32` | Vehicle speed in km/h |
+| `<node_name>/vehicle_speed` | `std_msgs/Float32` | Vehicle speed in m/s |
 
 ## Subscribed Topics
 
